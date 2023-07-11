@@ -7,8 +7,8 @@ function calcularLitros() {
     let textoKpl = elementoKpl.value;
     let kpl = Number(textoKpl);
 
-    let cantLitros = cantKm / kpl;
+    let cantLitros = Math.ceil(cantKm / kpl);
 
     let resultado = document.getElementById("textoResultado");
-    resultado.textContent = "Carga " + Math.ceil(cantLitros) + " litros de combustible";
+    resultado.textContent = "Carga " + cantLitros + " litros de combustible";
 }
